@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".payment.activities.TransactionActivity">
+
+    <item
+        android:id="@+id/action_menu_send"
+        android:title="SEND"
+        app:showAsAction="always|withText"
+        android:showAsAction="always|withText"
+        tools:ignore="AppCompatResource" />
+
+    <item
+        android:id="@+id/action_menu_autofill"
+        android:title="Fill in test data"
+        app:showAsAction="never"
+        android:showAsAction="never"
+        tools:ignore="AppCompatResource" />
+</menu>

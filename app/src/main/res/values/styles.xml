@@ -1,0 +1,75 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <!--<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
+        <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+        <!--<item name="colorPrimary">@color/colorPrimary</item>-->
+        <!--<item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+        <!--<item name="colorAccent">@color/colorAccent</item>-->
+    <!--</style>-->
+
+    <style name="MyTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowActionBar">false</item>
+        <item name="colorPrimary">#2196F3</item>
+        <item name="colorPrimaryDark">#1976D2</item>
+    </style>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="myTheme" parent="Theme.AppCompat.Light.NoActionBar" />
+
+    <!--Parking display-->
+    <style name="textViewParams">
+        <item name="android:layout_width">351dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">0.03</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <!--Tarriff layout-->
+    <style name="LayoutTarrifsParams">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="LayoutValidTarriff" parent="LayoutTarrifsParams">
+        <item name="android:background">#FF00DDFF</item>
+    </style>
+    <style name="LayoutNoValidTarriff" parent="LayoutTarrifsParams">
+        <item name="android:background">#00ffa6</item>
+    </style>
+    <!--Tarriff content-->
+    <style name="CommonTarriffContent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="LinearLayoutTContent" parent="CommonTarriffContent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+    <style name="textViewTarrifsParamsTitle" parent="CommonTarriffContent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textSize">25dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+    <style name="textViewTarrifsParamsContent" parent="CommonTarriffContent">
+        <item name="android:padding">8dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+    <style name="textViewTarrifsParamsBottom" parent="CommonTarriffContent">
+        <item name="android:textSize">10dp</item>
+        <item name="android:background">@drawable/tv_rounded_corners</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+    
+</resources>

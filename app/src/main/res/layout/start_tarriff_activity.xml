@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2017 Valpio-K.
+-->
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:verticalScrollbarPosition="right"
+    tools:context="com.valpiok.NaviPark.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/toolbar_bg"
+            android:textAlignment="center"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            android:weightSum="1">
+
+        </android.support.v7.widget.Toolbar>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:weightSum="1"
+        android:background="@drawable/restaurant"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/base"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            >
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tarriff_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.03"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="Tarriff"
+                >
+            </android.support.v7.widget.AppCompatTextView>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tarriff_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.03"
+                android:textSize="25sp"
+                android:textStyle="italic"
+                android:gravity="left"
+                android:text="Tarriff"
+                >
+            </android.support.v7.widget.AppCompatTextView>
+
+            <LinearLayout
+                android:id="@+id/set_timer_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.percent.PercentRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <LinearLayout
+                        app:layout_widthPercent="50%"
+                        app:layout_heightPercent="100%"
+                        android:orientation="vertical"
+                        >
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/tarriff_hour_up"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/up"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="5dp"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        app:layout_widthPercent="50%"
+                        app:layout_heightPercent="100%"
+                        android:orientation="vertical"
+                        app:layout_marginLeftPercent="50%"
+                        >
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/tarriff_min_up"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/up"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="5dp"
+                            />
+
+                    </LinearLayout>
+
+                    <!--<LinearLayout-->
+                        <!--app:layout_widthPercent="33%"-->
+                        <!--app:layout_heightPercent="100%"-->
+                        <!--android:orientation="vertical"-->
+                        <!--app:layout_marginLeftPercent="66%"-->
+                        <!--&gt;-->
+
+                        <!--<android.support.v7.widget.AppCompatImageView-->
+                            <!--android:id="@+id/tarriff_sec_up"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:background="@drawable/up"-->
+                            <!--android:layout_gravity="center_horizontal"-->
+                            <!--android:layout_marginTop="5dp"-->
+                            <!--/>-->
+
+                    <!--</LinearLayout>-->
+
+                </android.support.percent.PercentRelativeLayout>
+
+                <android.support.percent.PercentRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <LinearLayout
+                        app:layout_widthPercent="50%"
+                        app:layout_heightPercent="100%"
+                        android:orientation="vertical"
+                        >
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/display_timer_hour"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:text="00"
+                            android:textSize="30dp"
+                            android:textStyle="italic"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        app:layout_widthPercent="50%"
+                        app:layout_heightPercent="100%"
+                        android:orientation="vertical"
+                        app:layout_marginLeftPercent="50%"
+                        >
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/display_timer_min"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:text="00"
+                            android:textSize="30dp"
+                            android:textStyle="italic"
+                            />
+
+                    </LinearLayout>
+
+                    <!--<LinearLayout-->
+                        <!--app:layout_widthPercent="33%"-->
+                        <!--app:layout_heightPercent="100%"-->
+                        <!--android:orientation="vertical"-->
+                        <!--app:layout_marginLeftPercent="66%"-->
+                        <!--&gt;-->
+
+                        <!--<android.support.v7.widget.AppCompatTextView-->
+                            <!--android:id="@+id/display_timer_sec"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_gravity="center"-->
+                            <!--android:layout_marginTop="5dp"-->
+                            <!--android:text="00"-->
+                            <!--android:textSize="30dp"-->
+                            <!--android:textStyle="italic"-->
+                            <!--/>-->
+
+                    <!--</LinearLayout>-->
+
+                </android.support.percent.PercentRelativeLayout>
+
+                <android.support.percent.PercentRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <LinearLayout
+                        app:layout_widthPercent="50%"
+                        app:layout_heightPercent="100%"
+                        android:orientation="vertical"
+                        >
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/tarriff_hour_down"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/down"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="5dp"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        app:layout_widthPercent="50%"
+                        app:layout_heightPercent="100%"
+                        android:orientation="vertical"
+                        app:layout_marginLeftPercent="50%"
+                        >
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/tarriff_min_down"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/down"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="5dp"
+                            />
+
+                    </LinearLayout>
+
+                    <!--<LinearLayout-->
+                        <!--app:layout_widthPercent="33%"-->
+                        <!--app:layout_heightPercent="100%"-->
+                        <!--android:orientation="vertical"-->
+                        <!--app:layout_marginLeftPercent="66%"-->
+                        <!--&gt;-->
+
+                        <!--<android.support.v7.widget.AppCompatImageView-->
+                            <!--android:id="@+id/tarriff_sec_down"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:background="@drawable/down"-->
+                            <!--android:layout_gravity="center_horizontal"-->
+                            <!--android:layout_marginTop="5dp"-->
+                            <!--/>-->
+
+                    <!--</LinearLayout>-->
+
+                </android.support.percent.PercentRelativeLayout>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tarriff_calculate_result"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+            </android.support.v7.widget.AppCompatTextView>
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/start_timer"
+                android:layout_width="251dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Start timer"
+                android:textColor="#fff"
+                android:visibility="gone"
+                app:backgroundTint="#86BB30"/>
+
+
+
+    </LinearLayout>
+
+</ScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

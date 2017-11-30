@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Copyright 2017 Valpio-K. -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.valpiok.NaviPark">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.Manifest.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.flash" android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:name=".gn_classes.ErrorRepSender"
+        android:theme="@style/MyTheme">
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|mcc|mnc"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BarcodeCaptureActivity"
+            android:screenOrientation="portrait"
+            android:label="Read Barcode" />
+        <activity
+            android:name=".RegisterActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_register" />
+        <activity
+            android:name=".LocationActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|mcc|mnc"
+            android:label="Detect Parking"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_login"></activity>
+        <activity
+            android:name=".LocationQrActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_qr"></activity>
+
+        <!--Payment-->
+        <activity
+            android:name=".payment.activities.TransactionOverviewActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_qr"></activity>
+
+        <activity android:name=".payment.activities.TransactionActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".payment.activities.TransactionOverviewActivity" />
+        </activity>
+
+        <!-- card.io specific activities -->
+        <activity android:name="io.card.payment.CardIOActivity" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="io.card.payment.DataEntryActivity" />
+
+        <!--Start Tarriff Activity-->
+        <activity
+            android:name=".activities.StartTarriffActivity"
+            android:screenOrientation="portrait"
+            android:label="Start Tarriff Timer" />
+
+    </application>
+
+</manifest>

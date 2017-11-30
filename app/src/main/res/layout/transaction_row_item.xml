@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Merchant-ID"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        android:id="@+id/tv_merchant_id"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="01/13/2015"
+        android:paddingTop="16dp"
+        android:paddingRight="16dp"
+        android:id="@+id/tv_date"
+        android:textColor="#cccccc"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Reference number"
+        android:paddingLeft="16dp"
+        android:id="@+id/tv_reference_number"
+        android:layout_below="@+id/tv_merchant_id"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="CHF "
+        android:paddingLeft="16dp"
+        android:paddingBottom="16dp"
+        android:id="@+id/tv_currency"
+        android:layout_below="@+id/tv_reference_number"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="10.-"
+        android:paddingBottom="16dp"
+        android:id="@+id/tv_amount"
+        android:layout_alignBottom="@+id/tv_currency"
+        android:layout_toRightOf="@+id/tv_currency"
+        android:layout_toEndOf="@+id/tv_currency" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="#dbdbdb"
+        android:layout_below="@+id/tv_currency"
+        android:layout_alignRight="@+id/tv_date"
+        android:layout_alignEnd="@+id/tv_date" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="STATUS"
+        android:textSize="10dp"
+        android:background="@drawable/tv_rounded_corners"
+        android:padding="3dp"
+        android:layout_marginRight="16dp"
+        android:textColor="#ffffff"
+        android:id="@+id/tv_status"
+        android:layout_alignBottom="@+id/tv_reference_number"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>
